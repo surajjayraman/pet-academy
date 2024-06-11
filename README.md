@@ -38,5 +38,3 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 # pet-academy
 
 ![](https://petdrifts.com/images/dog-overlay.png)
-
-<video controls src="https://petdrifts.com/images/collar.mp4" title="Watch the video"></video>
