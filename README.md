@@ -39,4 +39,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ![](https://petdrifts.com/images/dog-overlay.png)
 
-[<video controls src="https://petdrifts.com/images/collar.mp4" title="Watch the video"></video>](https://petdrifts.com/images/collar.mp4)
+<video controls src="https://petdrifts.com/images/collar.mp4" title="Watch the video"></video>
