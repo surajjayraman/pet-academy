@@ -1,9 +1,11 @@
-import React from 'react'
+import Topbar from "@/components/Topbar";
 
 const HomeLayout = () => {
   return (
-    <div>layout</div>
-  )
-}
+    <>
+      <Topbar />
+    </>
+  );
+};
 
-export default HomeLayout
+export default HomeLayout;
