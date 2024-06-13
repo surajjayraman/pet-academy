@@ -76,6 +76,7 @@ body,
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -90,10 +91,4 @@ body,
   background-color: rgba(253, 171, 4, 0.8);
 }
 
-@layer components {
-  .border-border {
-    border: 1px solid;
-  }
-}
-
-@import "@uploadthing/react/styles.css";
+/* @import "@uploadthing/react/styles.css"; */
