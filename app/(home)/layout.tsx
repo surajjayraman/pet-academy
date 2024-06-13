@@ -1,9 +1,11 @@
 import Topbar from "@/components/Topbar";
+import { ReactNode } from "react";
 
-const HomeLayout = () => {
+const HomeLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <Topbar />
+      {children}
     </>
   );
 };
