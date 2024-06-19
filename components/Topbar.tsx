@@ -3,11 +3,10 @@ import Link from "next/link";
 import { Search } from "lucide-react";
 
 const Topbar = () => {
-
   const topRoutes = [
-    { name: "Instructor", path: "/instructor/courses" },
-    { name: "Learning", path: "/learning" },
-  ]
+    { label: "Instructor", path: "/instructor/courses" },
+    { label: "Learning", path: "/learning" },
+  ];
 
   return (
     <div className="flex justify-between items-center p-4">
@@ -22,6 +21,20 @@ const Topbar = () => {
         <button className="bg-[#FDAB04] rounded-r-full border-none outline-none cursor-pointer px-4 py-3 hover:bg-[#FDAB04]/80">
           <Search className="h-4 w-4" />
         </button>
+      </div>
+
+      <div className="flex gap-6 items-center">
+        <div className="max-sm:hidden flex gap-6">
+          {topRoutes.map((route) => (
+            <Link
+              href={route.path}
+              key={route.path}
+              className="text-sm font-medium hover:text-[#FDAB04]"
+            >
+              {route.label}
+            </Link>
+          ))}
+        </div>
       </div>
     </div>
   );
