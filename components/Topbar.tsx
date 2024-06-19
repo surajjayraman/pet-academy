@@ -1,9 +1,12 @@
+"use client"
 import Image from "next/image";
 import Link from "next/link";
 import { Search } from "lucide-react";
-import { UserButton } from "@clerk/nextjs";
+import { UserButton, useAuth } from "@clerk/nextjs";
 
 const Topbar = () => {
+  const { userId } = useAuth();
+
   const topRoutes = [
     { label: "Instructor", path: "/instructor/courses" },
     { label: "Learning", path: "/learning" },
@@ -36,7 +39,16 @@ const Topbar = () => {
             </Link>
           ))}
         </div>
-        <UserButton afterSignOutUrl="/sign-in"/>
+        {userId ? (
+          <UserButton afterSignOutUrl="/sign-in" />
+        ) : (
+          <Link
+            href="/sign-in"
+            className="text-sm font-medium hover:text-[#FDAB04]"
+          >
+            Sign In
+          </Link>
+        )}
       </div>
     </div>
   );
