@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Search } from "lucide-react";
+import { UserButton } from "@clerk/nextjs";
 
 const Topbar = () => {
   const topRoutes = [
@@ -35,6 +36,7 @@ const Topbar = () => {
             </Link>
           ))}
         </div>
+        <UserButton afterSignOutUrl="/sign-in"/>
       </div>
     </div>
   );
