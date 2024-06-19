@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Search } from "lucide-react";
 import { UserButton, useAuth } from "@clerk/nextjs";
+import { Button } from "./ui/button";
 
 const Topbar = () => {
   const { userId } = useAuth();
@@ -46,7 +47,7 @@ const Topbar = () => {
             href="/sign-in"
             className="text-sm font-medium hover:text-[#FDAB04]"
           >
-            Sign In
+            <Button>Sign In</Button>
           </Link>
         )}
       </div>
