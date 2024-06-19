@@ -3,6 +3,12 @@ import Link from "next/link";
 import { Search } from "lucide-react";
 
 const Topbar = () => {
+
+  const topRoutes = [
+    { name: "Instructor", path: "/instructor/courses" },
+    { name: "Learning", path: "/learning" },
+  ]
+
   return (
     <div className="flex justify-between items-center p-4">
       <Link href="/">
