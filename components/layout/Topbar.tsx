@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Search } from "lucide-react";
 import { UserButton, useAuth } from "@clerk/nextjs";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 
 const Topbar = () => {
   const { userId } = useAuth();
