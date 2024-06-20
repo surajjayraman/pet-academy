@@ -1,9 +1,16 @@
-import React from 'react'
+import { BarChart, MonitorPlay } from "lucide-react";
 
 const Sidebar = () => {
-  return (
-    <div>Sidebar</div>
-  )
-}
+  const sidebarRoutes = [
+    { icon: <MonitorPlay />, label: "Courses", path: "/instructor/courses" },
+    {
+      icon: <BarChart />,
+      label: "Performance",
+      path: "/instructor/performance",
+    },
+  ];
 
-export default Sidebar
+  return <div>Sidebar</div>;
+};
+
+export default Sidebar;
