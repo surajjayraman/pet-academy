@@ -1,9 +1,24 @@
-import React from 'react'
+import { auth } from "@clerk/nextjs/server";
+import Link from "next/link";
+import { redirect } from "next/navigation";
 
-const page = () => {
+import { Button } from "@/components/ui/button";
+
+const CoursesPage = async () => {
+  const { userId } = auth();
+
+  if (!userId) {
+    return redirect("/sign-in");
+  }
+
   return (
-    <div>page</div>
-  )
-}
+    <div className="px-6 py-4">
+      <Link href="/instructor/create-course">
+        <Button>Create New Course</Button>
+      </Link>
 
-export default page
+    </div>
+  );
+};
+
+export default CoursesPage;
