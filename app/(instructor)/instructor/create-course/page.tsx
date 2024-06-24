@@ -1,8 +1,9 @@
+import CreateCourseForm from '@/components/courses/CreateCourseForm'
 import React from 'react'
 
 const CreateCoursePage = () => {
   return (
-    <div>CreateCoursePage</div>
+    <div><CreateCourseForm /></div>
   )
 }
 
