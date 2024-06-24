@@ -1,16 +1,15 @@
-"use client"
+"use client";
 
-import { z } from "zod"
+import { z } from "zod";
 
 const formSchema = z.object({
-  username: z.string().min(2).max(50),
-})
-
+  title: z.string().min(2, {
+    message: "Title is required and minimum 2 characters"
+  }),
+});
 
 const CreateCourseForm = () => {
-  return (
-    <div>CreateCourseForm</div>
-  )
-}
+  return <div>CreateCourseForm</div>;
+};
 
-export default CreateCourseForm
+export default CreateCourseForm;
