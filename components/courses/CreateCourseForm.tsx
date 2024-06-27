@@ -15,6 +15,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { Combobox } from "../custom/ComboBox";
 
 const formSchema = z.object({
   title: z.string().min(2, {
@@ -72,7 +73,7 @@ const CreateCourseForm = () => {
               <FormItem>
                 <FormLabel>Category</FormLabel>
                 <FormControl>
-                  <Input placeholder="shadcn" {...field} />
+                  <Combobox options={categories}/>
                 </FormControl>
                 <FormMessage />
               </FormItem>
