@@ -37,7 +37,7 @@ interface CreateCourseFormProps {
   }
 }
 
-const CreateCourseForm = ({ categories }) => {
+const CreateCourseForm = ({ categories }: CreateCourseFormProps) => {
   // 1. Define your form.
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
