@@ -22,7 +22,7 @@ interface ComboBoxProps {
     options: {label: string, value: string}[]
 }
 
-export function ComboboxDemo() {
+export function ComboboxDemo({options}: ComboBoxProps) {
   const [open, setOpen] = React.useState(false)
   const [value, setValue] = React.useState("")
 
