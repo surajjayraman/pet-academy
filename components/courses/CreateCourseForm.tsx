@@ -29,7 +29,15 @@ const formSchema = z.object({
   }),
 });
 
-const CreateCourseForm = () => {
+interface CreateCourseFormProps {
+  categories: {
+    label: string // name of category
+    value: string // categoryId
+    subCategories: { label: string, value: string }[]
+  }
+}
+
+const CreateCourseForm = ({ categories }) => {
   // 1. Define your form.
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
