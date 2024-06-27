@@ -18,7 +18,9 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover"
 
-
+interface ComboBoxProps {
+    options: {label: string, value: string}[]
+}
 
 export function ComboboxDemo() {
   const [open, setOpen] = React.useState(false)
