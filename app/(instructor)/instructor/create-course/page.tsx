@@ -1,9 +1,18 @@
 import CreateCourseForm from '@/components/courses/CreateCourseForm'
+import { db } from '@/lib/db'
 import React from 'react'
 
-const CreateCoursePage = () => {
+const CreateCoursePage = async () => {
+  const categories = await db.category.findMany({
+    orderBy: {
+      name:"asc"
+    },
+    include:{
+      subCategories: true
+    }
+  })
   return (
-    <div><CreateCourseForm /></div>
+    <div><CreateCourseForm categories={categories}/></div>
   )
 }
 
