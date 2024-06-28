@@ -78,7 +78,7 @@ const CreateCourseForm = ({ categories }: CreateCourseFormProps) => {
             control={form.control}
             name="categoryId"
             render={({ field }) => (
-              <FormItem>
+              <FormItem className="flex flex-col">
                 <FormLabel>Category</FormLabel>
                 <FormControl>
                   <Combobox options={categories} {...field}/>
