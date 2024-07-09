@@ -75,7 +75,7 @@ const CreateCourseForm = ({ categories }: CreateCourseFormProps) => {
               <FormItem>
                 <FormLabel>Title</FormLabel>
                 <FormControl>
-                  <Input placeholder="shadcn" {...field} />
+                  <Input placeholder="Ex: Web Development for Beginners" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
